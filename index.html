@@ -1,14 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Mi Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-    <h1>Portafolio</h1>
-    
-</body>
+    <header>
+        <h1>Sarita marinao</h1>
+        <nav aria-label="Menú de Navegación">
+            <ul>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <img src="foto-perfil.jpg" alt="Foto de perfil de Nombre del Estudiante">
+            <p></p>
+            <h3>Habilidades</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="proyecto">
+                <h3>Proyecto Agiliturism</h3>
+                <img src="assets/img/aventura.jpg" alt="Imagen del Proyecto Agiliturism">
+                <p>Este proyecto es una plataforma de turismo que facilita la gestión de reservas y servicios turísticos.</p>
+                <p><a href="https://github.com/Juan-Cornejo/ProyectoAgiliturism" target="_blank">Ver en GitHub</a></p>
+            </div>
+            <div class="proyecto">
+                <h3>Proyecto Programación</h3>
+                <img src="assets/img/Educacion-virtual.jpg" alt="Imagen del Proyecto Programación">
+                <p>Este proyecto simula un portal de estudiantes, permitiendo la gestión de cursos y calificaciones.</p>
+                <p><a href="https://github.com/Juan-Cornejo/ProyectoProgramacion" target="_blank">Ver en GitHub</a></p>
+            </div>
+        </section>
+    </main>
+
+    <aside id="contacto">
+        <h2>Contacto</h2>
+        <ul class="contact-list">
+            <li>
+                <a href="mailto:smarinao2024@alu.uct.cl" target="_blank">
+                    <i class="fas fa-envelope"></i> smarinao2024@alu.uct.cl
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/smarinao202422" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/sari2.5" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </li>
+        </ul>
+    </aside>
+    
+    <footer>
+        <p>&copy; 2023 Nombre del Estudiante. Todos los derechos reservados.</p>
+    </footer>
+</body>
 </html>
+
