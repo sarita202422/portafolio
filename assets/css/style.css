@@ -50,7 +50,8 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
-    gap: 30px; /* Espacio entre las columnas */
+    gap: 30px;
+    /* Espacio entre las columnas */
     transition: opacity 0.3s ease;
 }
 
@@ -60,7 +61,8 @@ section {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd; /* Borde para resaltar la columna */
+    border: 1px solid #ddd;
+    /* Borde para resaltar la columna */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -75,7 +77,8 @@ aside {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd; /* Borde para resaltar la columna */
+    border: 1px solid #ddd;
+    /* Borde para resaltar la columna */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -110,14 +113,19 @@ img:hover {
 
 /* Estilo para las imágenes de los proyectos */
 .proyecto img {
-    width: 80%; /* Ancho máximo del 80% del contenedor */
-    height: auto; /* Altura automática para mantener la relación de aspecto */
-    display: block; /* Asegura que la imagen sea un elemento de bloque */
-    margin-left: 0; /* Alinea la imagen a la izquierda */
+    width: 80%;
+    /* Ancho máximo del 80% del contenedor */
+    height: auto;
+    /* Altura automática para mantener la relación de aspecto */
+    display: block;
+    /* Asegura que la imagen sea un elemento de bloque */
+    margin-left: 0;
+    /* Alinea la imagen a la izquierda */
     border-radius: 8px;
 }
 
-h2, h3 {
+h2,
+h3 {
     color: #555;
     border-bottom: 3px solid #ddd;
     padding-bottom: 8px;
@@ -176,8 +184,22 @@ a:hover {
         flex-direction: column;
     }
 
-    section, aside {
+    section,
+    aside {
         flex: 1 1 100%;
         margin-right: 0;
     }
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007BFF;
+    /* Color del enlace */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
 }
