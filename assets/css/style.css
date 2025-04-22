@@ -559,7 +559,7 @@ main {
         z-index: var(--z-index-dropdown);
     }
 
-    .main-nav.active {
+    .main-nav.nav-open {
         height: auto;
     }
 
@@ -602,16 +602,20 @@ main {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: var(--space-4);
     }
-
-    .back-to-top {
-        display: inline-block;
-        margin-top: 20px;
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
-        position: relative;
+    @media (max-width: 768px) {
+        .back-to-top {
+            width: 2.5rem;
+            height: 2.5rem;
+            bottom: var(--space-3);
+            right: var(--space-3);
+            font-size: 1rem;
+        }
+    
+        .back-to-top i {
+            font-size: 1rem;
+        }
     }
-
+    
     .back-to-top .arrow-up {
         display: inline-block;
         width: 0;
