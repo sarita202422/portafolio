@@ -2,84 +2,181 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Sarita Marinao, desarrolladora Full Stack.">
-    <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio de Sarita Marinao, desarrolladora Full Stack." />
+    <title>Sarita Marinao | Desarrolladora Full Stack</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Sarita Marinao</h1>
-        <nav aria-label="Menú de Navegación">
-            <ul>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Sarita <span>Marinao</span></h1>
+            <nav class="main-nav" aria-label="Menú de Navegación">
+                <ul>
+                    <li><a href="#sobre-mi" aria-label="Ir a la sección sobre mí">Sobre Mí</a></li>
+                    <li><a href="#proyectos" aria-label="Ir a la sección de proyectos">Proyectos</a></li>
+                    <li><a href="#contacto" aria-label="Ir a la sección de contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
     <main>
-        <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
-            <img src="assets/img/foto de perfil.avif" alt="Foto de perfil">
-            <p>Desarrolladora Full Stack apasionada por la creación de soluciones digitales eficientes y escalables,
-                con experiencia en tecnologías como JavaScript, bases de datos SQL y NoSQL. <br>
-                Me especializo en el desarrollo de aplicaciones web dinámicas y responsivas.
-            </p>
-            <h3>Habilidades</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
+        <section id="sobre-mi" class="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Sobre Mí</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="about-content">
+                    <div class="profile-image-container">
+                        <div class="profile-image-wrapper">
+                            <img src="assets/img/foto de perfil.jpg"
+                                alt="Foto de perfil de Sarita Marinao, desarrolladora Full Stack">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p class="bio">
+                            Desarrolladora Full Stack apasionada por la creación de soluciones digitales eficientes y
+                            escalables,
+                            con experiencia en tecnologías como JavaScript, bases de datos SQL y NoSQL.
+                            <br><br>
+                            Me especializo en el desarrollo de aplicaciones web dinámicas y responsivas.
+                        </p>
+
+                        <div class="skills-container">
+                            <h3>Habilidades</h3>
+                            <ul class="skills-list">
+                                <li><span>HTML</span></li>
+                                <li><span>CSS</span></li>
+                                <li><span>JavaScript</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="proyectos">
-            <h2>Proyectos</h2>
-            <div class="proyecto">
-                <h3>Proyecto Agiliturism</h3>
-                <img src="assets/img/aventura.jpg" alt="Imagen del Proyecto Agiliturism">
-                <p>Este proyecto es una plataforma de turismo que facilita la gestión de reservas y servicios
-                    turísticos.</p>
-                <p><a href="https://github.com/Juan-Cornejo/ProyectoAgiliturism" target="_blank">Ver en GitHub</a></p>
+        <section id="proyectos" class="projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Proyectos</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/aventura.jpg"
+                                alt="Imagen del proyecto Agiliturism, plataforma de turismo">
+                        </div>
+                        <div class="project-content">
+                            <h3>Proyecto Agiliturism</h3>
+                            <p>Este proyecto es una plataforma de turismo que facilita la gestión de reservas y
+                                servicios
+                                turísticos.</p>
+                            <a href="https://github.com/Juan-Cornejo/ProyectoAgiliturism" target="_blank"
+                                class="btn project-link" aria-label="Ver proyecto Agiliturism en GitHub">
+                                <i class="fab fa-github"></i> Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/Educacion-virtual.jpg"
+                                alt="Imagen del proyecto Programación, simulador de portal de estudiantes">
+                        </div>
+                        <div class="project-content">
+                            <h3>Proyecto Programación</h3>
+                            <p>Este proyecto simula un portal de estudiantes, permitiendo la gestión de cursos y
+                                calificaciones.</p>
+                            <a href="https://github.com/Juan-Cornejo/ProyectoProgramacion" target="_blank"
+                                class="btn project-link" aria-label="Ver proyecto Programación en GitHub">
+                                <i class="fab fa-github"></i> Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="proyecto">
-                <h3>Proyecto Programación</h3>
-                <img src="assets/img/Educacion-virtual.jpg" alt="Imagen del Proyecto Programación">
-                <p>Este proyecto simula un portal de estudiantes, permitiendo la gestión de cursos y calificaciones.</p>
-                <p><a href="https://github.com/Juan-Cornejo/ProyectoProgramacion" target="_blank">Ver en GitHub</a></p>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Contacto</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="contact-content">
+                    <p class="contact-intro">¿Tienes alguna pregunta o quieres colaborar en un proyecto? ¡Contáctame!
+                    </p>
+
+                    <ul class="contact-list">
+                        <li>
+                            <a href="mailto:smarinao2024@alu.uct.cl" target="_blank"
+                                aria-label="Enviar un correo a Sarita Marinao">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Email</h3>
+                                    <p>smarinao2024@alu.uct.cl</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/sarita202422" target="_blank"
+                                aria-label="Ver mi perfil en GitHub">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>GitHub</h3>
+                                    <p>sarita202422</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/sari2.5" target="_blank"
+                                aria-label="Ver mi perfil en Instagram">
+                                <div class="contact-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Instagram</h3>
+                                    <p>sari2.5</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
 
-    <aside id="contacto">
-        <h2>Contacto</h2>
-        <ul class="contact-list">
-            <li>
-                <a href="mailto:smarinao2024@alu.uct.cl" target="_blank">
-                    <i class="fas fa-envelope"></i> smarinao2024@alu.uct.cl
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/sarita202422" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </li>
-            <li>
-                <a href="https://instagram.com/sari2.5" target="_blank">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-            </li>
-        </ul>
-    </aside>
-    <p><a href="#" class="back-to-top">Volver al inicio</a></p>
+    <a href="#" class="back-to-top" aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-    <footer>
-        <p>&copy; 2025 Sarita Marinao. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Sarita Marinao. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 
