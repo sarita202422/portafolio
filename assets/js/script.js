@@ -26,12 +26,51 @@ document.addEventListener("DOMContentLoaded", function () {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
   
-        const nombre = document.getElementById("nombre").value.trim();
-        const correo = document.getElementById("correo").value.trim();
-        const mensaje = document.getElementById("mensaje").value.trim();
+        const nombreInput = document.getElementById("nombre");
+        const correoInput = document.getElementById("correo");
+        const mensajeInput = document.getElementById("mensaje");
   
-        if (!nombre || !correo || !mensaje) {
-          msg.textContent = "Por favor completa todos los campos.";
+        const nombre = nombreInput.value.trim();
+        const correo = correoInput.value.trim();
+        const mensaje = mensajeInput.value.trim();
+  
+        const correoValido = /^[^\s@]+@[^\s@]+\.(com|cl|net|org|edu|gov|es)$/i;
+  
+        // Resetear errores
+        [nombreInput, correoInput, mensajeInput].forEach(input =>
+          input.classList.remove("error")
+        );
+        msg.textContent = "";
+  
+        if (!nombre) {
+          nombreInput.classList.add("error");
+          nombreInput.focus();
+          msg.textContent = "Por favor ingresa tu nombre.";
+          msg.style.color = "var(--color-error)";
+          return;
+        }
+  
+        if (!correo) {
+          correoInput.classList.add("error");
+          correoInput.focus();
+          msg.textContent = "Por favor ingresa tu correo.";
+          msg.style.color = "var(--color-error)";
+          return;
+        }
+  
+        if (!correoValido.test(correo)) {
+          correoInput.classList.add("error");
+          correoInput.focus();
+          msg.textContent =
+            "Por favor ingresa un correo electrónico válido (ej: nombre@correo.com).";
+          msg.style.color = "var(--color-error)";
+          return;
+        }
+  
+        if (!mensaje) {
+          mensajeInput.classList.add("error");
+          mensajeInput.focus();
+          msg.textContent = "Por favor escribe un mensaje.";
           msg.style.color = "var(--color-error)";
           return;
         }
@@ -39,6 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
         msg.textContent = "Mensaje enviado correctamente. ¡Gracias!";
         msg.style.color = "var(--color-success)";
         form.reset();
+      });
+  
+      // Eliminar error al escribir
+      ["nombre", "correo", "mensaje"].forEach(id => {
+        const input = document.getElementById(id);
+        input.addEventListener("input", () => {
+          input.classList.remove("error");
+        });
       });
     }
   });

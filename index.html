@@ -121,52 +121,33 @@
                     <h2>Contacto</h2>
                     <div class="section-underline"></div>
                 </div>
-
+        
                 <div class="contact-content">
-                    <p class="contact-intro">¿Tienes alguna pregunta o quieres colaborar en un proyecto? ¡Contáctame!
+                    <p class="contact-intro">
+                        ¿Tienes alguna pregunta o quieres colaborar en un proyecto? ¡Contáctame usando el siguiente formulario!
                     </p>
-
-                    <ul class="contact-list">
-                        <li>
-                            <a href="mailto:smarinao2024@alu.uct.cl" target="_blank"
-                                aria-label="Enviar un correo a Sarita Marinao">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <h3>Email</h3>
-                                    <p>smarinao2024@alu.uct.cl</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/sarita202422" target="_blank"
-                                aria-label="Ver mi perfil en GitHub">
-                                <div class="contact-icon">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <h3>GitHub</h3>
-                                    <p>sarita202422</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://instagram.com/sari2.5" target="_blank"
-                                aria-label="Ver mi perfil en Instagram">
-                                <div class="contact-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <h3>Instagram</h3>
-                                    <p>sari2.5</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+        
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+        
+                    <p id="form-msg"></p>
                 </div>
             </div>
         </section>
+        
     </main>
 
     <a href="#" class="back-to-top" aria-label="Volver al inicio">
